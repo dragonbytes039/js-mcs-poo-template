@@ -2,7 +2,7 @@ import express  from "express";
 import 'dotenv/config';
 import { connectDB } from "../config/DB/configDb.js";
 import { timeout } from "./middleware/timeOut.js";
-import ExampleRouter from "./routers/example.js";
+import ExampleRouter from "./routes/example.router.js";
 
 export async function startServer() {
 

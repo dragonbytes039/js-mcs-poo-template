@@ -1,5 +1,5 @@
 import type { Request, Response , NextFunction } from "express";
-import { Example } from "../services/example/Example.js";
+import { ExampleCreate } from "../services/example/create.js";
 
 
 export class ExampleController {
@@ -8,8 +8,8 @@ export class ExampleController {
         
         try {
             
-            const exampleService = new Example("insert Models")
-            const result = exampleService.createExample()
+            const exampleService = new ExampleCreate("insert Models")
+            const result = exampleService.execute()
 
             res.status(200).send("create", result)
             
